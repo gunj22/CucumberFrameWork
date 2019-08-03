@@ -1,0 +1,77 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2019-08-03T13:08:15.077Z",
+        "line": 24,
+        "name": "Loging into Rediff Money",
+        "description": "",
+        "id": "logging-in-rediffmail-money;loging-into-rediff-money",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "I Open Chrome Browser",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 26,
+            "name": "I navigate to siteUrl",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 27,
+            "name": "I type sam_bhasin4@rediffmail.com in username field",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "I Click on continue_button",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Logging in Rediffmail Money",
+    "description": "",
+    "id": "logging-in-rediffmail-money",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/com/cucumber/featuresFiles/Login.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
