@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,6 +39,8 @@ public class Webconnector {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\main\\resources\\com\\cucumber\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 
 	}
 
@@ -53,7 +56,7 @@ public class Webconnector {
 
 	public void type(String data, String elementKey) {
 
-		driver.findElement(By.xpath(prop.getProperty("email_address"))).sendKeys(data);
+		driver.findElement(By.xpath(prop.getProperty(elementKey))).sendKeys(data);
 	}
 
 }

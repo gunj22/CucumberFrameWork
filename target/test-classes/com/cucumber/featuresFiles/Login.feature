@@ -24,5 +24,8 @@ Feature: Logging in Rediffmail Money
   Scenario: Loging into Rediff Money
     Given I Open Chrome Browser
     And I navigate to siteUrl
-    And I type sam_bhasin4@rediffmail.com in username field
+    And I enter ashishthakur1983 in emailAddress field
     And I Click on continue_button
+    Then I type pass@1234 in password field
+    And After that i click on loginButton
+    

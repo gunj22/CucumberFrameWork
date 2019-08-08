@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 					strict = true, 
 					monochrome = true, 
 					features = { "src/test/resources/" }, 
-					glue = {"com.cucumber.runner" }, 
+					glue = {"com.cucumber.steps" },
 					plugin = { "pretty", "html:target/site/cucumber-html", "json:target/cucumber1.json" }
 
 )

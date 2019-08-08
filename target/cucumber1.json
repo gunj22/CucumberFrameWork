@@ -3,7 +3,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2019-08-03T13:08:15.077Z",
+        "start_timestamp": "2019-08-08T17:13:14.916Z",
         "line": 24,
         "name": "Loging into Rediff Money",
         "description": "",
@@ -13,38 +13,118 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 7783897840,
+              "status": "passed"
             },
             "line": 25,
             "name": "I Open Chrome Browser",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "Chrome",
+                  "offset": 7
+                }
+              ],
+              "location": "GenericSteps.I_Open_Browser(String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 3492810179,
+              "status": "passed"
             },
             "line": 26,
             "name": "I navigate to siteUrl",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "siteUrl",
+                  "offset": 14
+                }
+              ],
+              "location": "GenericSteps.I_navigate(String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 350611042,
+              "status": "passed"
             },
             "line": 27,
-            "name": "I type sam_bhasin4@rediffmail.com in username field",
-            "match": {},
+            "name": "I enter ashishthakur1983 in emailAddress field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ashishthakur1983",
+                  "offset": 8
+                },
+                {
+                  "val": "emailAddress",
+                  "offset": 28
+                }
+              ],
+              "location": "GenericSteps.I_Type_Username(String,String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1159844685,
+              "status": "passed"
             },
             "line": 28,
             "name": "I Click on continue_button",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "continue_button",
+                  "offset": 11
+                }
+              ],
+              "location": "GenericSteps.I_Click(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 215683849,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I type pass@1234 in password field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pass@1234",
+                  "offset": 7
+                },
+                {
+                  "val": "password",
+                  "offset": 20
+                }
+              ],
+              "location": "GenericSteps.I_Type_Password(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 148698102,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "After that i click on loginButton",
+            "match": {
+              "arguments": [
+                {
+                  "val": "loginButton",
+                  "offset": 22
+                }
+              ],
+              "location": "GenericSteps.I_again_click_On_ContinueButton(String)"
+            },
             "keyword": "And "
           }
         ],
