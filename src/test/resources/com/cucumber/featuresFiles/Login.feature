@@ -21,11 +21,24 @@ Feature: Logging in Rediffmail Money
   
 
   @Login
-  Scenario: Loging into Rediff Money
-    Given I Open Chrome Browser
+  Scenario Outline: Loging into Rediff Money
+    #Given I Open Chrome Browser
+    #And I navigate to siteUrl
+    #And I enter ashishthakur1983 in emailAddress field
+    #And I Click on continue_button
+    #Then I type pass@1234 in password field
+    #And After that i click on loginButton
+    
+    Given I Open <Browser> Browser
     And I navigate to siteUrl
-    And I enter ashishthakur1983 in emailAddress field
-    And I Click on continue_button
-    Then I type pass@1234 in password field
-    And After that i click on loginButton
+    And I login into application
+    |UserName	| ashishthakur1983	|
+    |Password	| pass@1234			|
+    Then login should be <Result>
+    
+    Examples: 
+    |Browser	|Result	|
+    |Chrome		|Sucess	| 	
+    
+    
     

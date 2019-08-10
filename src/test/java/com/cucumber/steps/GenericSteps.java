@@ -1,7 +1,11 @@
 package com.cucumber.steps;
 
+
 import com.cucumber.webdriver.Webconnector;
 
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -14,7 +18,18 @@ public class GenericSteps {
 		this.connect = connect;
 	}
 
-	
+	@Before
+	public void before(Scenario s) {
+		connect.initReports(s.getName());
+
+	}
+
+	@After
+	public void after() {
+		connect.quit();
+
+	}
+
 	@Given("^I Open (.*) Browser$")
 	public void I_Open_Browser(String browserName) {
 		connect.openBrowser(browserName);
@@ -27,8 +42,8 @@ public class GenericSteps {
 	}
 
 	@And("^I enter (.*) in (.*) field$")
-	public void I_Type_Username(String data,String locatorKey) {
-		System.out.println("Typing in " + locatorKey + ". Data " +data);
+	public void I_Type_Username(String data, String locatorKey) {
+		System.out.println("Typing in " + locatorKey + ". Data " + data);
 		connect.type(data, locatorKey);
 	}
 
@@ -38,23 +53,16 @@ public class GenericSteps {
 		Thread.sleep(1000);
 
 	}
-	
+
 	@Then("^I type (.*) in (.*) field$")
-	public void I_Type_Password(String data,String password){
-		//connect.clickOnElement(password);
-		connect.type(data,password);
+	public void I_Type_Password(String data, String password) {
+
+		connect.type(data, password);
 	}
-	
+
 	@And("^After that i click on (.*)$")
-	public void I_again_click_On_ContinueButton(String continu_Button){
+	public void I_again_click_On_ContinueButton(String continu_Button) {
 		connect.clickOnElement(continu_Button);
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }

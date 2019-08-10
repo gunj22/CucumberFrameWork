@@ -9,10 +9,69 @@ formatter.feature({
     }
   ]
 });
+formatter.scenarioOutline({
+  "name": "Loging into Rediff Money",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Login"
+    }
+  ]
+});
+formatter.step({
+  "name": "I Open \u003cBrowser\u003e Browser",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "I navigate to siteUrl",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I login into application",
+  "keyword": "And ",
+  "rows": [
+    {
+      "cells": [
+        "UserName",
+        "ashishthakur1983"
+      ]
+    },
+    {
+      "cells": [
+        "Password",
+        "pass@1234"
+      ]
+    }
+  ]
+});
+formatter.step({
+  "name": "login should be \u003cResult\u003e",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "Browser",
+        "Result"
+      ]
+    },
+    {
+      "cells": [
+        "Chrome",
+        "Sucess"
+      ]
+    }
+  ]
+});
 formatter.scenario({
   "name": "Loging into Rediff Money",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
       "name": "@Login"
@@ -21,6 +80,9 @@ formatter.scenario({
       "name": "@Login"
     }
   ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
   "name": "I Open Chrome Browser",
@@ -43,43 +105,40 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter ashishthakur1983 in emailAddress field",
+  "name": "I login into application",
+  "rows": [
+    {
+      "cells": [
+        "UserName",
+        "ashishthakur1983"
+      ]
+    },
+    {
+      "cells": [
+        "Password",
+        "pass@1234"
+      ]
+    }
+  ],
   "keyword": "And "
 });
 formatter.match({
-  "location": "GenericSteps.I_Type_Username(String,String)"
+  "location": "ApplicationSteps.login_into_Application(String,String\u003e)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Click on continue_button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "GenericSteps.I_Click(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I type pass@1234 in password field",
+  "name": "login should be Sucess",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "GenericSteps.I_Type_Password(String,String)"
+  "location": "ApplicationSteps.login_should_be(String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "After that i click on loginButton",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "GenericSteps.I_again_click_On_ContinueButton(String)"
-});
-formatter.result({
+formatter.after({
   "status": "passed"
 });
 });

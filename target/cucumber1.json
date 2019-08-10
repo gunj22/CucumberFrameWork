@@ -3,20 +3,42 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2019-08-08T17:13:14.916Z",
-        "line": 24,
+        "start_timestamp": "2019-08-10T08:48:50.267Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1288121169,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 41,
         "name": "Loging into Rediff Money",
         "description": "",
-        "id": "logging-in-rediffmail-money;loging-into-rediff-money",
+        "id": "logging-in-rediffmail-money;loging-into-rediff-money;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3974733624,
+              "status": "passed"
+            },
+            "match": {
+              "location": "GenericSteps.after()"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 7783897840,
+              "duration": 28561674112,
               "status": "passed"
             },
-            "line": 25,
+            "line": 32,
             "name": "I Open Chrome Browser",
             "match": {
               "arguments": [
@@ -31,10 +53,10 @@
           },
           {
             "result": {
-              "duration": 3492810179,
+              "duration": 10453128681,
               "status": "passed"
             },
-            "line": 26,
+            "line": 33,
             "name": "I navigate to siteUrl",
             "match": {
               "arguments": [
@@ -49,83 +71,47 @@
           },
           {
             "result": {
-              "duration": 350611042,
+              "duration": 3144761459,
               "status": "passed"
             },
-            "line": 27,
-            "name": "I enter ashishthakur1983 in emailAddress field",
+            "line": 34,
+            "name": "I login into application",
             "match": {
-              "arguments": [
-                {
-                  "val": "ashishthakur1983",
-                  "offset": 8
-                },
-                {
-                  "val": "emailAddress",
-                  "offset": 28
-                }
-              ],
-              "location": "GenericSteps.I_Type_Username(String,String)"
+              "location": "ApplicationSteps.login_into_Application(String,String\u003e)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "UserName",
+                  "ashishthakur1983"
+                ]
+              },
+              {
+                "cells": [
+                  "Password",
+                  "pass@1234"
+                ]
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1159844685,
+              "duration": 4990374592,
               "status": "passed"
             },
-            "line": 28,
-            "name": "I Click on continue_button",
+            "line": 37,
+            "name": "login should be Sucess",
             "match": {
               "arguments": [
                 {
-                  "val": "continue_button",
-                  "offset": 11
+                  "val": "Sucess",
+                  "offset": 16
                 }
               ],
-              "location": "GenericSteps.I_Click(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 215683849,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "I type pass@1234 in password field",
-            "match": {
-              "arguments": [
-                {
-                  "val": "pass@1234",
-                  "offset": 7
-                },
-                {
-                  "val": "password",
-                  "offset": 20
-                }
-              ],
-              "location": "GenericSteps.I_Type_Password(String,String)"
+              "location": "ApplicationSteps.login_should_be(String)"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 148698102,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "After that i click on loginButton",
-            "match": {
-              "arguments": [
-                {
-                  "val": "loginButton",
-                  "offset": 22
-                }
-              ],
-              "location": "GenericSteps.I_again_click_On_ContinueButton(String)"
-            },
-            "keyword": "And "
           }
         ],
         "tags": [
